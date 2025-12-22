@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Submit a Resource • Knowledge Hub • The Nova Initiative</title>
+  <meta name="description" content="Submit an article, video, guide, or project idea to the student-led Knowledge Hub." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css?v=2" />
+  <link rel="icon" href="../assets/svg/The Nova Initiative logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="../assets/svg/The Nova Initiative logo.png" />
+  <meta name="theme-color" content="#1E847F" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="../index.html#home" class="logo" aria-label="The Nova Initiative home">
+        <img class="logo-img" src="../assets/svg/The Nova Initiative logo.png" alt="" />
+        <span class="logo-text">The Nova Initiative</span>
+      </a>
+
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" role="navigation">
+        <ul>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../focus.html">Focus</a></li>
+          <li><a href="../team.html">Team</a></li>
+          <li><a href="../impact.html">Impact</a></li>
+          <li><a href="../resources.html" aria-current="page">Resources</a></li>
+          <li><a href="../events.html">Events</a></li>
+          <li><a href="../join.html" class="btn btn-accent btn-sm">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section page-hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container">
+        <h1 class="display">Submit a Resource</h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width:720px">
+        <article class="form-card" data-reveal="up">
+          <div class="form-intro" style="margin-bottom:10px">
+            <p class="muted">Share an article, video, guide, or project idea to help fellow students learn and take action. Our team will review each submission for quality and safety.</p>
+          </div>
+
+          <form id="resSubmit" action="https://formsubmit.co/initiative.nova@gmail.com" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="_subject" value="New Knowledge Hub Submission" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="thank-you.html" />
+            <div id="submitStatus" class="form-status" aria-live="polite" role="status"></div>
+
+            <div class="form-field">
+              <label for="student_name">Student Name</label>
+              <input id="student_name" name="Student Name" type="text" placeholder="Your full name" required />
+            </div>
+
+            <div class="form-field">
+              <label for="school_name">School Name</label>
+              <input id="school_name" name="School Name" type="text" placeholder="Your school" required />
+            </div>
+
+            <div class="form-field">
+              <label for="resource_type">Resource Type</label>
+              <select id="resource_type" name="Resource Type" required>
+                <option value="Article">Article</option>
+                <option value="Video">Video</option>
+                <option value="Guide">Guide</option>
+                <option value="Project Idea">Project Idea</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="resource_title">Resource Title</label>
+              <input id="resource_title" name="Resource Title" type="text" placeholder="Title of your resource" required />
+            </div>
+
+            <div class="form-field">
+              <label for="details">Link or Description</label>
+              <textarea id="details" name="Link or Description" placeholder="Paste a link, or describe your resource with key details" required></textarea>
+            </div>
+
+            <div class="form-field">
+              <label for="attachment">Upload File (PDF or image)</label>
+              <input id="attachment" name="attachment" type="file" accept=".pdf,image/*" />
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn-accent" type="submit">Submit Resource</button>
+            </div>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo small">
+          <img class="logo-img" src="../assets/svg/The Nova Initiative logo.png" alt="" />
+          <span class="logo-text">The Nova Initiative</span>
+        </div>
+        <p class="muted">Building a youth-powered future.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="../index.html#home">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../focus.html">Focus</a>
+        <a href="../team.html">Team</a>
+        <a href="../impact.html">Impact</a>
+        <a href="../resources.html">Resources</a>
+        <a href="../events.html">Events</a>
+        <a href="../join.html">Contact Us</a>
+        <a href="../faq.html">FAQ</a>
+      </nav>
+      <div class="footer-meta">
+        <p>© <span id="year"></span> The Nova Initiative. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/script.js" defer></script>
+  <script>
+    (function(){
+      var form = document.getElementById('resSubmit');
+      if(!form) return;
+      var nextInput = form.querySelector('input[name="_next"]');
+      if (nextInput) { nextInput.value = new URL('thank-you.html', window.location.href).href; }
+      var statusEl = document.getElementById('submitStatus');
+      function setStatus(type, msg){ if(!statusEl) return; statusEl.classList.remove('success','error'); statusEl.classList.add(type); statusEl.textContent = msg; }
+      var modal, closeBtn, backBtn;
+      function ensureModalRefs(){
+        if(!modal) modal = document.getElementById('thankyouModal');
+        if(!closeBtn) closeBtn = document.getElementById('tyClose');
+        if(!backBtn) backBtn = document.getElementById('tyBack');
+      }
+      // Ensure modal is hidden on initial load (no pre-open)
+      (function initModal(){
+        ensureModalRefs();
+        if (modal) { modal.classList.add('hidden'); modal.style.display = 'none'; }
+      })();
+      form.addEventListener('submit', async function(e){
+        e.preventDefault();
+        try {
+          ensureModalRefs();
+          if (modal) { modal.classList.remove('hidden'); modal.style.display = 'grid'; }
+          var tyMsg = document.getElementById('tyMessage');
+          if (tyMsg) tyMsg.textContent = 'Submitting your resource…';
+          var submitBtn = form.querySelector('button[type="submit"]');
+          if (submitBtn) submitBtn.disabled = true;
+          setStatus('success', 'Submitting...');
+          var data = new FormData(form);
+          var resp = await fetch(form.action, { method: form.method, body: data, headers: { 'Accept': 'application/json' } });
+          if (resp.ok) {
+            form.reset();
+            if (backBtn) backBtn.focus();
+            if (tyMsg) tyMsg.textContent = 'Thank you for contributing to the Knowledge Hub! Our team will review your submission shortly.';
+            setStatus('success', 'Submitted!');
+            if (submitBtn) submitBtn.disabled = false;
+          } else {
+            setStatus('error', 'Sorry, there was a problem. Please try again or email initiative.nova@gmail.com.');
+            if (tyMsg) tyMsg.textContent = 'Sorry, there was a problem sending your submission. Please try again or email initiative.nova@gmail.com.';
+            if (submitBtn) submitBtn.disabled = false;
+          }
+        } catch (err) {
+          setStatus('error', 'Network error. Please try again or email initiative.nova@gmail.com.');
+          var tyMsg = document.getElementById('tyMessage');
+          if (tyMsg) tyMsg.textContent = 'Network error. Please try again or email initiative.nova@gmail.com.';
+          ensureModalRefs();
+          if (modal) modal.classList.remove('hidden');
+          var submitBtn = form.querySelector('button[type="submit"]');
+          if (submitBtn) submitBtn.disabled = false;
+        }
+      });
+      document.addEventListener('click', function(ev){
+        ensureModalRefs();
+        if (ev.target && ev.target.id === 'tyClose' && modal) {
+          modal.classList.add('hidden');
+          modal.style.display = 'none';
+        }
+      });
+    })();
+  </script>
+  <div id="thankyouModal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="tyTitle" style="display:none; position:fixed; inset:0; background: rgba(0,0,0,0.45); place-items:center; z-index:1000;">
+    <div class="form-card" style="max-width:560px; text-align:center;">
+      <h2 id="tyTitle">Thank you</h2>
+      <p id="tyMessage">Thank you for contributing to the Knowledge Hub! Our team will review your submission shortly.</p>
+      <div style="display:flex; gap:8px; justify-content:center; margin-top:10px; flex-wrap:wrap;">
+        <button class="btn btn-ghost" id="tyClose" type="button">Close</button>
+        <a class="btn btn-accent" href="../resources.html" id="tyBack">Back to Hub</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

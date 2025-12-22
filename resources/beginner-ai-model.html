@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beginner AI: First Model in 30 Minutes • Knowledge Hub • The Nova Initiative</title>
+  <meta name="description" content="A friendly, beginner guide to training a simple model using a tiny dataset and evaluating it responsibly." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css?v=2" />
+  <link rel="icon" href="../assets/svg/The Nova Initiative logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="../assets/svg/The Nova Initiative logo.png" />
+  <meta name="theme-color" content="#1E847F" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="../index.html#home" class="logo" aria-label="The Nova Initiative home">
+        <img class="logo-img" src="../assets/svg/The Nova Initiative logo.png" alt="" />
+        <span class="logo-text">The Nova Initiative</span>
+      </a>
+
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" role="navigation">
+        <ul>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../focus.html">Focus</a></li>
+          <li><a href="../team.html">Team</a></li>
+          <li><a href="../impact.html">Impact</a></li>
+          <li><a href="../resources.html" aria-current="page">Resources</a></li>
+          <li><a href="../events.html">Events</a></li>
+          <li><a href="../join.html" class="btn btn-accent btn-sm">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div id="top"></div>
+    <section class="section page-hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container">
+        <h1 class="display">Beginner AI: First Model in 30 Minutes</h1>
+      </div>
+    </section>
+
+    <section class="section resource">
+      <div class="container">
+        <div style="margin-bottom:12px; display:flex; gap:8px; flex-wrap:wrap">
+          <a class="btn btn-ghost" href="../resources.html">Back to Hub</a>
+        </div>
+
+        <div class="article-meta">
+          <span class="tag tech">AI</span>
+          <span class="read-time">6–7 min read</span>
+        </div>
+
+        <div class="statement" data-reveal="up">
+          <p>Training your first AI model doesn’t require advanced math or expensive hardware. With student‑friendly tools like Google’s Teachable Machine — or visual coding platforms like Scratch extensions — you can build a tiny prototype in under an hour and, more importantly, learn the habits of safe, honest experimentation.</p>
+        </div>
+
+        <div class="img-placeholder" style="margin:14px 0 6px">Screenshot placeholder — a Teachable Machine image project</div>
+        <div class="img-caption">Teachable Machine lets you collect images, train, and test in your browser.</div>
+
+        <div class="article-body">
+          <h2>Why this matters for youth in Abu Dhabi</h2>
+          <p>AI is shaping how we learn, work, and solve problems. Building a simple model helps students understand how data quality, labeling, and evaluation affect outcomes. It also opens a path to apply technology to local challenges — from recycling education to campus safety — in ways that are ethical, age‑appropriate, and aligned with school policies.</p>
+
+          <h2>Project: a “Hello World” image classifier</h2>
+          <p><strong>Goal:</strong> Train a tiny model to distinguish between two categories (for example, recyclable vs. non‑recyclable items, or two kinds of school objects). You’ll create a dataset, train, test, and reflect on limitations.</p>
+
+          <h3>1) Define the task and guardrails</h3>
+          <p>Pick a harmless, school‑safe topic. Avoid any sensitive or identifiable personal data. Agree on ground rules with a teacher: no faces, no private info, and always ask permission before taking photos. Decide the two classes you’ll recognize and write down 1–2 simple use cases (e.g., a demo that shows which bin to use).</p>
+
+          <h3>2) Collect a tiny dataset</h3>
+          <p>Capture 20–50 images per class using different angles, lighting, and backgrounds. Keep it balanced (similar number of examples for each class). Label images clearly. Variety matters more than quantity at this stage. If photographing objects, place them on a simple background to reduce noise.</p>
+
+          <h3>3) Train in Teachable Machine</h3>
+          <p>Create an image project, add two classes, and upload your images. Use default settings for the first run. Click Train and wait a minute. When done, explore the preview webcam or image upload to test your model. Note your accuracy, but also pay attention to where it misclassifies.</p>
+
+          <div class="img-placeholder" style="margin:10px 0 6px">Diagram placeholder — data → train → test → reflect loop</div>
+          <div class="img-caption">A simple loop: collect a bit of data, train, test, and reflect.</div>
+
+          <h3>4) Test honestly and record results</h3>
+          <p>Test on new images that the model hasn’t seen before. Vary lighting and background to see where it fails. Capture 5–10 test cases and write a short note: what worked, what didn’t, and why. Avoid exaggerated claims — small models make mistakes, and that’s okay when you’re learning.</p>
+
+          <h3>5) Improve the dataset</h3>
+          <p>Add examples for challenging cases (e.g., crumpled wrappers, reflective bottles). Keep classes balanced. Try training again and compare results. Discuss whether improvements are due to better data, different angles, or simply randomness in training.</p>
+
+          <h3>6) Share responsibly</h3>
+          <p>Present a short demo with three parts: what you tried, what the model can do, and what it cannot do. Include a note on privacy and ethics. If you export the model, do so only for harmless demos (like a sorting game). Clearly state that the project is educational, not a production system.</p>
+
+          <h2>Optional: try Scratch + AI extensions</h2>
+          <p>If you prefer a block‑based approach, use Scratch with computer vision extensions to create interactive projects (e.g., a game that reacts to an object). The learning goals are the same: be thoughtful about data, test honestly, and reflect on what you learned.</p>
+
+          <h2>Where to go next</h2>
+          <ul class="key-list checks">
+            <li>Increase classes (e.g., paper, plastic, metal) and compare difficulty.</li>
+            <li>Write a 1‑page reflection covering data quality, overfitting, and ethics.</li>
+            <li>Connect to a community use case, like labeling school bins with icons.</li>
+          </ul>
+
+          <div style="text-align:center; margin-top:14px; display:flex; gap:8px; justify-content:center; flex-wrap:wrap">
+            <a class="btn btn-ghost" href="#top">Back to Top</a>
+            <a class="btn btn-accent" href="../resources.html">Back to Hub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <a href="#top" class="btn btn-accent back-top" aria-label="Back to top">↑</a>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo small">
+          <img class="logo-img" src="../assets/svg/The Nova Initiative logo.png" alt="" />
+          <span class="logo-text">The Nova Initiative</span>
+        </div>
+        <p class="muted">Building a youth-powered future.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="../index.html#home">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../focus.html">Focus</a>
+        <a href="../team.html">Team</a>
+        <a href="../impact.html">Impact</a>
+        <a href="../resources.html">Resources</a>
+        <a href="../events.html">Events</a>
+        <a href="../join.html">Contact Us</a>
+        <a href="../faq.html">FAQ</a>
+      </nav>
+      <div class="footer-meta">
+        <p>© <span id="year"></span> The Nova Initiative. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/script.js" defer></script>
+</body>
+</html>

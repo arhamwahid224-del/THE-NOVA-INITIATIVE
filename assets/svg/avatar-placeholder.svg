@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="Faceless avatar placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#EAF6F5"/>
+      <stop offset="100%" stop-color="#DDEEEE"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="64" fill="url(#bg)"/>
+  <g fill="#C8DAD9">
+    <circle cx="64" cy="50" r="22"/>
+    <path d="M20 110c8-20 28-34 44-34s36 14 44 34"/>
+  </g>
+</svg>
